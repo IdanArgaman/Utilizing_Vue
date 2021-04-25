@@ -1,19 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <AsyncHelloWorld />
+    <br/>
+    <BaseLayout>
+      <template #header="{date, msg}">
+        Header template, date from scope "{{ date }}", "{{ msg }}"
+      </template>
+
+      <p>A paragraph for the main content.</p>
+      <p>And another one.</p>
+
+      <template #footer="{magicNumber, msg}">
+        <p>
+          Footer template, data from scope: "{{ magicNumber }}", "{{ msg }}"
+        </p>
+      </template>
+    </BaseLayout>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import AsyncHelloWorld from './components/AsyncHelloWorld';
 
+import BaseLayout from "./components/baseLayout";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    BaseLayout,
+    // AsyncHelloWorld
+    AsyncHelloWorld: () => import("./components/AsyncHelloWorld.vue"),
+  },
+};
 </script>
 
 <style>
