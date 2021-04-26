@@ -3,6 +3,7 @@
     <nav>
       <router-link to="/async">Async Component</router-link>
       <router-link to="/basic-slots">Basic Slots</router-link>
+      <router-link to="/tabs">Tabs</router-link>
     </nav>
     <div class="view"><router-view></router-view></div>
   </div>
@@ -31,9 +32,9 @@ export default {
   text-align: initial;
   margin: 10px;
   padding: 5px;
-  border:1px solid black;
+  border: 1px solid black;
   box-shadow: inset 0 0 10px #ccc;
-  flex: 1
+  flex: 1;
 }
 nav a:link,
 nav a:visited {

@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router';
 
 import BasicSlotsPage from './pages/basic-slots/BasicSlotsPage';
+import TabPage from './pages/tabs/tabsPage.vue';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -17,6 +18,10 @@ const router = new VueRouter({
     {
       path: '/basic-slots',
       component: BasicSlotsPage
+    },
+    {
+      path: '/tabs',
+      component: TabPage
     }
   ]
 })
