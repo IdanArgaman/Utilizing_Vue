@@ -11,6 +11,8 @@
 </template>
 
 <script>
+// Thanks to: https://learnvue.co/2019/12/building-reusable-components-in-vuejs-tabs/
+
 import Tab from "./tab.vue";
 import Tabs from "./tabs.vue";
 
