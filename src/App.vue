@@ -1,35 +1,17 @@
 <template>
   <div id="app">
-    <AsyncHelloWorld />
-    <br/>
-    <BaseLayout>
-      <template #header="{date, msg}">
-        Header template, date from scope "{{ date }}", "{{ msg }}"
-      </template>
-
-      <p>A paragraph for the main content.</p>
-      <p>And another one.</p>
-
-      <template #footer="{magicNumber, msg}">
-        <p>
-          Footer template, data from scope: "{{ magicNumber }}", "{{ msg }}"
-        </p>
-      </template>
-    </BaseLayout>
+    <nav>
+      <router-link to="/async">Async Component</router-link>
+      <router-link to="/basic-slots">Basic Slots</router-link>
+    </nav>
+    <div class="view"><router-view></router-view></div>
   </div>
 </template>
 
 <script>
-// import AsyncHelloWorld from './components/AsyncHelloWorld';
-
-import BaseLayout from "./components/baseLayout";
 export default {
   name: "App",
-  components: {
-    BaseLayout,
-    // AsyncHelloWorld
-    AsyncHelloWorld: () => import("./components/AsyncHelloWorld.vue"),
-  },
+  components: {},
 };
 </script>
 
@@ -40,6 +22,36 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.view {
+  text-align: initial;
+  margin: 10px;
+  padding: 5px;
+  border:1px solid black;
+  box-shadow: inset 0 0 10px #ccc;
+  flex: 1
+}
+nav a:link,
+nav a:visited {
+  background-color: purple;
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+nav a:hover,
+nav a:active {
+  background-color: #6d0062;
 }
 </style>
