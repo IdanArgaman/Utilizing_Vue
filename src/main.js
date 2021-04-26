@@ -7,12 +7,17 @@ import BasicSlotsPage from './pages/basic-slots/BasicSlotsPage';
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 
-const AsyncHelloWorld = () => import("./components/AsyncHelloWorld.vue");
+const AsyncHelloWorld = () => import("./pages/async/AsyncHelloWorld.vue");
 
 const router = new VueRouter({
-  routes: [
-    {path: '/async', component: AsyncHelloWorld},
-    {path: '/basic-slots', component: BasicSlotsPage}
+  routes: [{
+      path: '/async',
+      component: AsyncHelloWorld
+    },
+    {
+      path: '/basic-slots',
+      component: BasicSlotsPage
+    }
   ]
 })
 
