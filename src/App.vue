@@ -4,6 +4,7 @@
       <router-link to="/async">Async Component</router-link>
       <router-link to="/basic-slots">Basic Slots</router-link>
       <router-link to="/tabs">Tabs</router-link>
+      <router-link to="/modal">Reusable Modal</router-link>
     </nav>
     <div class="view"><router-view></router-view></div>
   </div>
