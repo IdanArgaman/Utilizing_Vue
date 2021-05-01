@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 import BasicSlotsPage from './pages/basic-slots/BasicSlotsPage';
 import TabPage from './pages/tabs/tabsPage.vue';
 import RuesableModalPage from './pages/modal/ModalApp.vue';
+import ListenersAndAttrs from './pages/listenersAndAttrs/parent.vue';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -27,6 +28,10 @@ const router = new VueRouter({
     {
       path: '/modal',
       component: RuesableModalPage
+    },
+    {
+      path: '/ListenersAndAttrs',
+      component: ListenersAndAttrs
     }
   ]
 })
