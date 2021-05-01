@@ -24,7 +24,7 @@ export default {
       // `Object.assign` merges objects together to form a new object
       return Object.assign(
         {},
-        // We add all the listeners from the parent
+        // We add all the listeners set on the parent, for example: <Wrapper @focus...></Wrapper>
         this.$listeners,
         // Then we can add custom listeners or override the
         // behavior of some listeners.
