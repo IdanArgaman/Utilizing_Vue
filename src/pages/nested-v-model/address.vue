@@ -26,7 +26,7 @@ export default {
     // Using watch to detect changes coming from even in nested element
     // Alsom using a watch allows us to avoid using change detection DOM events 
     // on the element in use!
-    localAddress: {
+    value: {
       handler(newVal) {
         this.$emit("input", newVal);
       },
