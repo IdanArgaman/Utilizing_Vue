@@ -6,6 +6,8 @@ import BasicSlotsPage from './pages/basic-slots/BasicSlotsPage';
 import TabPage from './pages/tabs/tabsPage.vue';
 import RuesableModalPage from './pages/modal/ModalApp.vue';
 import ListenersAndAttrs from './pages/listenersAndAttrs/parent.vue';
+import NestedVModelPage from './pages/nested-v-model/nestedVModelPage.vue';
+import BasicsPage from './pages/basics/vueBasicsPage.vue'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -13,7 +15,16 @@ Vue.use(VueRouter);
 const AsyncHelloWorld = () => import("./pages/async/AsyncHelloWorld.vue");
 
 const router = new VueRouter({
-  routes: [{
+  routes: [
+    {
+      path: '/basic',
+      component: BasicsPage
+    },
+    {
+      path: '/nested-v-model',
+      component: NestedVModelPage
+    },
+    {
       path: '/async',
       component: AsyncHelloWorld
     },
