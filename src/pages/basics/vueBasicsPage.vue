@@ -1,13 +1,18 @@
 <template>
-  <Address v-bind="address" />
+  <div>
+    <Address v-bind="address" />
+    <br/>
+    <Parent :data="address" data-xxx="temp" />
+  </div>
 </template>
 
 <script>
 import Address from "./address";
-
+import Parent from "./parent";
 export default {
   components: {
-    Address
+    Address,
+    Parent,
   },
   data() {
     return {
