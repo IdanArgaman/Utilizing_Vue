@@ -2,6 +2,7 @@
   <div id="app">
     <nav>
       <router-link to="/basic">Basics Vue</router-link>
+      <router-link to="/dynamic-form">Dynamic Form</router-link>
       <router-link to="/nested-v-model">Nested v-model</router-link>
       <router-link to="/async">Async Component</router-link>
       <router-link to="/basic-slots">Basic Slots</router-link>

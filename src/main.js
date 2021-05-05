@@ -8,6 +8,7 @@ import RuesableModalPage from './pages/modal/ModalApp.vue';
 import ListenersAndAttrs from './pages/listenersAndAttrs/parent.vue';
 import NestedVModelPage from './pages/nested-v-model/nestedVModelPage.vue';
 import BasicsPage from './pages/basics/vueBasicsPage.vue'
+import DynamicFormPage from './pages/dynamic-form/dynamicFormPage.vue';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -16,9 +17,13 @@ const AsyncHelloWorld = () => import("./pages/async/AsyncHelloWorld.vue");
 
 const router = new VueRouter({
   routes: [
-    {
+    {      
       path: '/basic',
       component: BasicsPage
+    },
+    {
+      path: '/dynamic-form',
+      component: DynamicFormPage
     },
     {
       path: '/nested-v-model',
