@@ -1,13 +1,26 @@
 <template>
   <div class="dynamic-input">
     <label :for="value">{{ label }}</label>
-    <input :id="value" type="text" :value="value" @input="onInput" />
+    <input :id="value" type="text" 
+      :value="value" @input="onInput"
+      :class="{'error': !validation(value)}" />
   </div>
 </template>
 
 <script>
 export default {
-  props: ["label","value"],
+  props: {
+    label: {
+      type: String
+    },
+    value: {
+      
+    },
+    validation: {
+      type: Function,
+      default: () => true
+    }
+  },
   methods: {
     onInput($event) {
       this.$emit('input', $event.target.value);
@@ -34,6 +47,10 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+input.error {
+  border: 1px solid red;
 }
 
 </style>

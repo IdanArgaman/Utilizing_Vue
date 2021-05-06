@@ -37,6 +37,7 @@ export default {
           type: "text",
           path: "firstName",
           label: "First Name",
+          validation: (v) => v !== 'hello'
         },
         {
           type: "text",
