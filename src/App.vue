@@ -9,6 +9,7 @@
       <router-link to="/tabs">Tabs</router-link>
       <router-link to="/modal">Reusable Modal</router-link>
       <router-link to="/ListenersAndAttrs">Listeners and Attrs</router-link>
+      <router-link to="/render">Using Render Function</router-link>
     </nav>
     <div class="view"><router-view></router-view></div>
   </div>

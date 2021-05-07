@@ -9,6 +9,7 @@ import ListenersAndAttrs from './pages/listenersAndAttrs/parent.vue';
 import NestedVModelPage from './pages/nested-v-model/nestedVModelPage.vue';
 import BasicsPage from './pages/basics/vueBasicsPage.vue'
 import DynamicFormPage from './pages/dynamic-form/dynamicFormPage.vue';
+import RenderPage from './pages/render/renderPage.vue';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -20,6 +21,10 @@ const router = new VueRouter({
     {      
       path: '/basic',
       component: BasicsPage
+    },
+    {      
+      path: '/render',
+      component: RenderPage
     },
     {
       path: '/dynamic-form',

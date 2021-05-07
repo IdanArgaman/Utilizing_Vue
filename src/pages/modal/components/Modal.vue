@@ -15,6 +15,12 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  // The modal can also provide common modal functionality
+  // like handling escape key used to close the modal
+}
+</script>
 <style scoped>
 .modal-dialog {
   position: fixed;
