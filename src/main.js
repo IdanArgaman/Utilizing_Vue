@@ -12,6 +12,7 @@ import DynamicFormPage from './pages/dynamic-form/dynamicFormPage.vue';
 import RenderPage from './pages/render/renderPage.vue';
 import CustomEventsPage from './pages/customEvents/page.vue';
 import RenderlessPage from './pages/renderless/page.vue';
+import AxiosHocPage from './pages/axios-hoc/page.vue';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -23,6 +24,10 @@ const router = new VueRouter({
     {      
       path: '/basic',
       component: BasicsPage
+    },
+    {      
+      path: '/axios-hoc',
+      component: AxiosHocPage
     },
     {      
       path: '/renderless',
