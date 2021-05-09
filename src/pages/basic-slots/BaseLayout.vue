@@ -4,7 +4,8 @@
       <slot name="header" v-bind="headerData"></slot>
     </header>
     <main>
-       <p>Main Content:</p>
+      <br />
+      Default Content:
       <slot></slot>
     </main>
     <footer>
