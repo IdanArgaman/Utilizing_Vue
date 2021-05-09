@@ -10,6 +10,8 @@ import NestedVModelPage from './pages/nested-v-model/nestedVModelPage.vue';
 import BasicsPage from './pages/basics/vueBasicsPage.vue'
 import DynamicFormPage from './pages/dynamic-form/dynamicFormPage.vue';
 import RenderPage from './pages/render/renderPage.vue';
+import CustomEventsPage from './pages/customEvents/page.vue';
+import RenderlessPage from './pages/renderless/page.vue';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -21,6 +23,14 @@ const router = new VueRouter({
     {      
       path: '/basic',
       component: BasicsPage
+    },
+    {      
+      path: '/renderless',
+      component: RenderlessPage
+    },
+    {      
+      path: '/custom-events',
+      component: CustomEventsPage
     },
     {      
       path: '/render',

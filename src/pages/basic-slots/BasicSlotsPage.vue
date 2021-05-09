@@ -9,6 +9,7 @@
 
     <template #footer="{magicNumber, msg}">
       <p>Footer template, data from scope: "{{ magicNumber }}", "{{ msg }}"</p>
+      <p>Good Morning!</p>
     </template>
   </BaseLayout>
 </template>
