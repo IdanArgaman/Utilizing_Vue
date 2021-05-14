@@ -13,6 +13,10 @@ import RenderPage from './pages/render/renderPage.vue';
 import CustomEventsPage from './pages/customEvents/page.vue';
 import RenderlessPage from './pages/renderless/page.vue';
 import AxiosHocPage from './pages/axios-hoc/page.vue';
+import AdvancedRoutingPage from './pages/advanced-routing/adavancedRoutingPage.vue';
+import UserPage from './pages/advanced-routing/user.vue';
+import UserLikes from './pages/advanced-routing/userLikes.vue';
+import UserPosts from './pages/advanced-routing/userPosts.vue';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -20,24 +24,23 @@ Vue.use(VueRouter);
 const AsyncHelloWorld = () => import("./pages/async/AsyncHelloWorld.vue");
 
 const router = new VueRouter({
-  routes: [
-    {      
+  routes: [{
       path: '/basic',
       component: BasicsPage
     },
-    {      
+    {
       path: '/axios-hoc',
       component: AxiosHocPage
     },
-    {      
+    {
       path: '/renderless',
       component: RenderlessPage
     },
-    {      
+    {
       path: '/custom-events',
       component: CustomEventsPage
     },
-    {      
+    {
       path: '/render',
       component: RenderPage
     },
@@ -68,9 +71,32 @@ const router = new VueRouter({
     {
       path: '/ListenersAndAttrs',
       component: ListenersAndAttrs
+    },
+    {
+      path: '/advanced-routing',
+      component: AdvancedRoutingPage,
+      children: [{
+        name: 'user',
+        path: ':userId',
+        component: UserPage,
+        children: [{
+            name: 'likes',
+            path: 'likes',
+            component: UserLikes,
+          },
+          {
+            name: 'posts',
+            path: 'posts',
+            component: UserPosts,
+          }
+        ]
+      }]
     }
   ]
 })
+
+Vue.prototype.append = (path, pathToAppend) =>
+  path + (path.endsWith('/') ? '' : '/') + pathToAppend;
 
 new Vue({
   render: h => h(App),
