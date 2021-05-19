@@ -13,10 +13,14 @@ import RenderPage from './pages/render/renderPage.vue';
 import CustomEventsPage from './pages/customEvents/page.vue';
 import RenderlessPage from './pages/renderless/page.vue';
 import AxiosHocPage from './pages/axios-hoc/page.vue';
-import AdvancedRoutingPage from './pages/advanced-routing/adavancedRoutingPage.vue';
-import UserPage from './pages/advanced-routing/user.vue';
-import UserLikes from './pages/advanced-routing/userLikes.vue';
-import UserPosts from './pages/advanced-routing/userPosts.vue';
+import NestedRoutingPage from './pages/advanced-routing/nested/nestedRoutingPage.vue';
+import UserPage from './pages/advanced-routing/nested/user.vue';
+import UserLikes from './pages/advanced-routing/nested/userLikes.vue';
+import UserPosts from './pages/advanced-routing/nested/userPosts.vue';
+import NamedRoutingPage from './pages/advanced-routing/named/namedViewsPage.vue';
+import NamedRoutingUserComponent from './pages/advanced-routing/named/user.vue';
+import NamedRoutingGuestComponent from './pages/advanced-routing/named/guest.vue';
+import NamedRoutingChildComponent from './pages/advanced-routing/named/child.vue';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -73,8 +77,21 @@ const router = new VueRouter({
       component: ListenersAndAttrs
     },
     {
-      path: '/advanced-routing',
-      component: AdvancedRoutingPage,
+      path: '/routing-named/:id',
+      component: NamedRoutingPage,
+      props: true,
+      children: [{
+        path: "child",
+        components: {
+          default: NamedRoutingChildComponent,
+          user: NamedRoutingUserComponent,
+          guest: NamedRoutingGuestComponent,
+        },
+      }, ],
+    },
+    {
+      path: '/routing-nested',
+      component: NestedRoutingPage,
       children: [{
         name: 'user',
         path: ':userId',

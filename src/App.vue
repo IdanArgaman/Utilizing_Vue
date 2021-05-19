@@ -13,7 +13,8 @@
       <router-link to="/custom-events">Playing with custom events</router-link>
       <router-link to="/renderless">Renderless component</router-link>
       <router-link to="/axios-hoc">Axios HOC</router-link>
-      <router-link to="/advanced-routing">Advanced Routing</router-link>
+      <router-link to="/routing-nested">Routing - Nested</router-link>
+      <router-link to="/routing-named/1234">Routing - Named</router-link>
     </nav>
     <div class="view"><router-view></router-view></div>
   </div>
