@@ -36,6 +36,11 @@ export default {
       test: "Test Data From Page", // The slot (even if scoped) has an access to this data
     };
   },
+  type: "Page",
+  routeConfig: {
+    path: "/basic-slots",
+  },
+  displayName: "Basic Slots Usage",
 };
 </script>
 

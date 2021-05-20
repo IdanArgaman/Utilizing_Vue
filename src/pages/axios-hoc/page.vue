@@ -18,7 +18,11 @@ export default {
     },
     created() {
         this.axios = axios;
-    }
+    },
+    routeConfig: {
+      path: '/axios-hoc',
+    },
+    displayName: 'Using axios HOC'
 }
 </script>
 <style lang="">

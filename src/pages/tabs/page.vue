@@ -35,6 +35,10 @@ export default {
       }
     },
   },
+  routeConfig: {
+    path: "/tabs",
+  },
+  displayName: 'A Tab Component Using $children'
 };
 </script>
 

@@ -20,7 +20,7 @@ import dynamicGroup from "./components/dynamic-group";
 const map = {
   text: dynamicInput,
   button: dynamicButton,
-  group: dynamicGroup
+  group: dynamicGroup,
 };
 
 export default {
@@ -37,7 +37,7 @@ export default {
           type: "text",
           path: "firstName",
           label: "First Name",
-          validation: (v) => v !== 'hello'
+          validation: (v) => v !== "hello",
         },
         {
           type: "text",
@@ -70,12 +70,16 @@ export default {
         firstName: "Idan",
         lastName: "Argaman",
         address: {
-            street: 'Rakafot',
-            zip: 1800
-        }
+          street: "Rakafot",
+          zip: 1800,
+        },
       },
     };
   },
+  routeConfig: {
+    path: "/dynamic-form",
+  },
+  displayName: "Dynamic Form Example",
 };
 </script>
 

@@ -29,6 +29,10 @@ export default {
       moreTimes: [new Date()],
     };
   },
+  routeConfig: {
+    path: "/custom-events"
+  },
+  displayName: "Vue Custom Events",
 };
 </script>
 

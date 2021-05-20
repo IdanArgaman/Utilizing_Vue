@@ -1,17 +1,19 @@
 <template>
   <RenderLessTasks v-model="tasks">
-      <!-- When using the abbreviated syntax we should wrap the template content with div
+    <!-- When using the abbreviated syntax we should wrap the template content with div
       if we don't do so, $scopedSlots.default would return multiple root elements -->
 
-      <!-- Using the renderless technic, the renderless component provides the functionality
+    <!-- Using the renderless technic, the renderless component provides the functionality
       and the template provides the UI that is exposed to this functionality by the 
       scoped slots -->
     <template
-      #default="{ tasks, removeTask, addTask, inputProps, inputEvents }">
+      #default="{ tasks, removeTask, addTask, inputProps, inputEvents }"
+    >
       <div>
         <ul>
           <li v-for="task in tasks" :key="task">
-            {{ task.name }} <button type="button" @click="removeTask(task)">Remove</button>
+            {{ task.name }}
+            <button type="button" @click="removeTask(task)">Remove</button>
           </li>
         </ul>
         Add Task
@@ -33,6 +35,10 @@ export default {
       tasks: [],
     };
   },
+  routeConfig: {
+    path: "/renderless",
+  },
+  displayName: "Using a Renderless Component",
 };
 </script>
 <style lang="">

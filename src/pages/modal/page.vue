@@ -20,6 +20,10 @@ export default {
         .catch((v) => alert("dismissed" + v));
     },
   },
+  routeConfig: {
+    path: "/modal",
+  },
+  displayName: "Reusable Modal Service",
 };
 </script>
 

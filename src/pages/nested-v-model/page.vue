@@ -1,19 +1,15 @@
 <template>
   <div>
-    <Address v-bind="address" />
-    <br/>
-    <Parent :data="address" data-xxx="temp" />
+    <Address v-model="address"></Address>
+    JSON: {{ address }}
   </div>
 </template>
 
 <script>
-import Address from "./address";
-import Parent from "./parent";
+import Address from "./address.vue";
+
 export default {
-  components: {
-    Address,
-    Parent,
-  },
+  components: { Address },
   data() {
     return {
       address: {
@@ -24,6 +20,10 @@ export default {
       },
     };
   },
+  routeConfig: {
+    path: "/nested-v-model",
+  },
+  displayName: "Nested v-model",
 };
 </script>
 

@@ -28,10 +28,35 @@
 </template>
 
 <script>
+
+import UserPage from './user.vue';
+import UserLikes from './userLikes.vue';
+import UserPosts from './userPosts.vue';
+
 export default {
   mounted() {
     console.log(this.$route);
   },
+  routeConfig:{
+      path: '/routing-nested',
+      children: [{
+        name: 'user',
+        path: ':userId',
+        component: UserPage,
+        children: [{
+            name: 'likes',
+            path: 'likes',
+            component: UserLikes,
+          },
+          {
+            name: 'posts',
+            path: 'posts',
+            component: UserPosts,
+          }
+        ]
+      }]
+    },
+    displayName: 'Routing - Using Nested Routes'
 };
 </script>
 
