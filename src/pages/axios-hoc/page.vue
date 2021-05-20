@@ -1,5 +1,8 @@
 <template lang="">
     <div>
+        <h1>
+            Wait for error message to appear...
+        </h1>
         <WithErrorHandling :axios="axios">
             <ProductList/>
         </WithErrorHandling>
